@@ -32,7 +32,8 @@ const MainContent = ({ handleHeader }) => {
     };
 
     // 슬라이드 클릭 이벤트
-    const handleSlideClick = (index) => {
+    const handleSlideClick = (index) => {     
+        console.log( index, swiperRef.current)   
         if (swiperRef.current) {
             if (lastClickedIndex === index) {
                 setIsSubLayerVisible(true);
@@ -48,7 +49,7 @@ const MainContent = ({ handleHeader }) => {
     // 서브 레이어 렌더링
     const renderSubLayer = (theme) => {
         return (
-            <SubLayer theme={theme} isShow={true}/>
+            <SubLayer theme={theme} isShow={true} slideTo={activeIndex}/>
         );
     };
        
@@ -79,6 +80,7 @@ const MainContent = ({ handleHeader }) => {
                                 setActiveIndex(swiper.activeIndex);
                                 setIsSubLayerVisible(false);
                                 setLastClickedIndex(null);
+                                console.log(isSubLayerVisible)
                             }}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
@@ -122,8 +124,8 @@ const MainContent = ({ handleHeader }) => {
             </div>        
         </section>
         <div className="swiper-pagination"></div>        
-        {showSwiper && isSubLayerVisible && activeIndex !== null && activeIndex !== 0 && ReactDOM.createPortal(
-            renderSubLayer(themes[activeIndex - 1]),
+        {isSubLayerVisible && activeIndex !== null && activeIndex !== 0 && ReactDOM.createPortal(
+            renderSubLayer(themes[activeIndex-1]),
             document.getElementById('root')
         )}
     </>
