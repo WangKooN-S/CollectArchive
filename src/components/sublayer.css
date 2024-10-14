@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+
+/* 스크롤바 */
+.lay-detail{position: fixed;top:30px;left:30px;right:30px;bottom:30px;background: rgba(0,0,0,.95);z-index: 20;display: none;}
+.lay-detail::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;background-color: rgba(255,255,255,.2);}
+.lay-detail::-webkit-scrollbar{width: 12px;background-color: transparent;}
+.lay-detail::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #555;}
+.lay-detail.is-show{display:block;}
+.lay-detail__head{position: fixed;top:30px;left:30px;right:30px;min-height:150px;z-index:25;background: rgba(0,0,0,.95);border-bottom:1px solid #343333;text-align: left;box-shadow:0 10px 20px rgba(0,0,0,.8)}
+.lay-detail__head-title{padding: 30px 50px 0;text-align: left;}
+.lay-detail__text-theme{color:#666666;font-size:14px;letter-spacing: -1px;font-weight: 400;height:18px;line-height: 18px;text-transform:uppercase}
+.lay-detail__title{position: relative;font-weight: 900;height:47px;display:flex;align-items:baseline;gap:0 8px}
+.lay-detail__btn-close{background: url(../images/ico_btn_close.png) no-repeat 50% 50%;position: absolute;top:20px;right:20px;width:30px;height:30px;z-index: 10;text-indent:-9999em}
+#sub_cont{width:100%;position: relative;display: none;position: absolute;bottom:0;left:0;right:0;overflow:auto;text-align:left}
+::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: rgba(255,255,255,.2);}
+::-webkit-scrollbar{width: 12px;background-color: transparent;}
+::-webkit-scrollbar-thumb{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #555;}
+
+/* 서브레이어 */
+.lay-detail__title > span{display:inline-block;}
+.lay-detail__title--en{font-size:36px;color:#eeeeee;letter-spacing: -2px;padding-right:8px}
+.lay-detail__title--ko{font-size:24px;position: relative;line-height: 30px;letter-spacing: -1px;padding-left:2px;font-weight: bold;color:#fff}
+
+/* 서브레이어 - 서브메뉴 */
+.lay-detail__head .sub_menu{padding:7px 50px;color:#fff;position: relative;display:flex;align-items:center;}
+.lay-detail__head .sub_menu li{height:40px;line-height:40px;font-size:15px;padding:0 15px 0 0;letter-spacing:-1px;opacity: .7;}
+.lay-detail__head .sub_menu li:hover{opacity: .9;}
+.lay-detail__head .sub_menu li.btn_list{margin-left:auto;padding:0 5px 0 35px;margin:0 5px;position: relative;}
+.lay-detail__head .sub_menu li.btn_list:after{content:"";width:26px;height:26px;border-radius:13px 13px;background:url(../images/ico_detail_blk.png) no-repeat 50% 50% rgba(255,255,255,.3);position: absolute;top:7px;left:0;cursor: pointer;}
+
+/* 서브레이어 - HTML 타입 */
+#layerInner{line-height:14px;color:#fff;padding:40px 50px;}
+#layerInner h2{font-size:24px;line-height:24px}
+#layerInner h2 + .inner{margin-top:20px;margin-bottom:20px}
+#layerInner h3{font-size:20px;line-height:20px}
+#layerInner h3 + .inner{margin-top:16px;margin-bottom:16px}
+#layerInner .inner{font-size:14px;line-height:26px;letter-spacing:-.5px;overflow: hidden;clear: both;color:rgba(255,255,255,.7)}
+#layerInner .inner-group h2 + h3{margin-top:10px;}
+#layerInner .inner-group h2 + h3 + h4 {margin-top:10px;}
+#layerInner h4{color:rgba(255,255,255,.8)}
+/* 서브레이어 - 리스트타입 */
+table{border-collapse: collapse;width:100%;min-width:720px;max-width:1024px}
+table *{font-family:Roboto, Droid Sans, Helvetica,'NanumSquareNeoLight','맑은고딕','Malgun Gothic' , AppleSDGothicNeo, 'Apple SD 산돌고딕 Neo', Apple-Gothic, '애플고딕', 'gulim', '굴림', 'Tahoma', 'dotum', '돋움',  sans-serif;letter-spacing:-1px}
+#layerInner h2{border-bottom:2px solid #fff;display:inline-block;padding-bottom:10px}
+#layerInner .table-group{margin:20px 0;overflow: auto;width:100%;}
+#layerInner .table-align-center *{text-align:center}
+#layerInner .txt-target{line-height:30px;font-size:18px;display:block;opacity:.8;padding:20px 0 5px}
+#layerInner table{font-size:12px;border: 1px solid #333;}
+/*#layerInner table tr{cursor: pointer;}*/
+#layerInner table tr.disabled{color:rgba(255,255,255,.4)}
+/*#layerInner table tr:hover{box-shadow: 0 0 20px rgba(255,255,255,.3)}*/
+#layerInner table tr.img-record{cursor:pointer;}
+#layerInner table tr.img-record:hover{box-shadow: 0 0 20px rgba(255,255,255,.3);background-color:rgba(255,255,255,.1);}
+#layerInner table tr.img-selected{/*border:2px solid #fff;*/background-color:rgba(255,255,255,.8);color:#000;}
+#layerInner table tr th{background:#000;opacity: 1;color:#fff;}
+#layerInner table tr td,
+#layerInner table tr th{height:24px;padding:0 5px;border: 1px solid #333;}
+#layerInner table tr td{height:34px}
+#layerInner table tr td.active{font-weight: bold;/* color: #ffc107; */background: rgba(255,255,255,.1)}
+#layerInner table tr td.eu-active{text-indent: -9999em}
+#layerInner table tr td.eu-disabled{background: rgba(0,0,0,.5);text-indent:-9999em}
+#layerInner table tr td br + span{font-size:11px;font-family:dotum;opacity:.5;letter-spacing:0}
+#layerInner table tr.table-mg td{border:0;color:transparent;text-indent: -9999em}
+#layerInner table tr.v-flag-title td{border:0;color:transparent;}
+#layerInner table tr.v-flag-title td{height:60px}
+#layerInner table tr.v-flag-title td[data-field-type="v-name"]{color:#fff;text-align:left;white-space: nowrap;text-indent:80px;font-size:20px;}
+#layerInner table tr.v-flag-title td[data-field-type="v-name"]{font-family:'NanumSquareNeoLight',"맑은 고딕",Roboto, Droid Sans, Helvetica, AppleSDGothicNeo, 'Apple SD 산돌고딕 Neo', Apple-Gothic, '애플고딕', 'Tahoma', 'dotum', '돋움', 'gulim', '굴림', sans-serif;}
+#layerInner table tr.v-type-title td[data-field-type="v-name"]{color:#fff;text-align:left;white-space: nowrap;font-size:20px;height:50px;color:#ffcc00;font-weight:700}
+#layerInner table tr.v-type-title td[data-field-type="v-name"]:before{content:"•";margin-right:6px}
+#layerInner table tr.v-type-title td[data-field-type="v-name"]{font-family:'NanumSquareNeoLight',"맑은 고딕",Roboto, Droid Sans, Helvetica, AppleSDGothicNeo, 'Apple SD 산돌고딕 Neo', Apple-Gothic, '애플고딕', 'Tahoma', 'dotum', '돋움', 'gulim', '굴림', sans-serif;}
+
+#layerInner.typeListStamp td[data-field-type="v-name"],
+#layerInner.typeListStamp td[data-field-type="v-design"]{text-align:left;text-indent:10px}
+
+/* 배경이미지는 80x60 - 실제 국기는 60x40 */
+
+/*서브레이어 - Table Header , 서브레이어 - 소장리스트 버튼 컬러*/
+.theme2 table tr td.active{background-color:#501822 !important}
+.theme3 table tr td.active{background-color:#370092 !important}
+.theme5 table tr td.active{background-color:#07403b !important}
+.theme6 table tr td.active{background-color:#262902 !important}
+.theme7 table tr td.active{background-color:#461534 !important}
+.theme8 table tr td.active{background-color:#402907 !important}
+.theme9 table tr td.active{background-color:#2c1549 !important}
+.theme10 table tr td.active{background-color:#49151f !important}
+
+.theme2 ul.sub_menu li.btn_list:after{background-color:#eb1e45 !important}
+.theme3 ul.sub_menu li.btn_list:after{background-color:#8f4bff !important}
+.theme4 ul.sub_menu li.btn_list:after{background-color:#03a9f4 !important}
+.theme5 ul.sub_menu li.btn_list:after{background-color:#00ccbb !important}
+.theme6 ul.sub_menu li.btn_list:after{background-color:#c8d920 !important}
+.theme7 ul.sub_menu li.btn_list:after{background-color:#f149b4 !important}
+.theme8 ul.sub_menu li.btn_list:after{background-color:#ff9800 !important}
+.theme9 ul.sub_menu li.btn_list:after{background-color:#8f4bff !important}
+.theme10 ul.sub_menu li.btn_list:after{background-color:#eb1e45 !important}
+
+
+/*서브 레이어 - 유로형 */
+#layerInner.typeListEuro table{width:auto}
+#layerInner.typeListEuro table tr,
+#layerInner.typeListEuro table th,
+#layerInner.typeListEuro table td{height:70px;/*table-layout:fixed;word-wrap:break-word;word-break:break-all;*/padding:0;}
+#layerInner.typeListEuro table tr{background: url(../images/bgEuCommon.png) no-repeat 102px 1px;background-size:600px auto;}
+/*#layerInner .img-euro{background: url(../images/eurocoins.png) no-repeat 0 0;width:560px;height:70px}*/
+#layerInner .img-euro{background: url(../images/eurocoins.png) no-repeat 0 0;width:560px;height:70px}
+
+.bg-eu-Austria{background:url(../images/bgEuAustria.png) no-repeat 102px 1px !important;}
+.bg-eu-Belgium1999{background:url(../images/bgEuBelgium.png) no-repeat 102px 1px !important;}
+.bg-eu-Belgium2008{background:url(../images/bgEuBelgium.png) no-repeat 102px -69px !important;}
+.bg-eu-Belgium2014{background:url(../images/bgEuBelgium.png) no-repeat 102px -139px !important;}
+.bg-eu-Cyprus{background:url(../images/bgEuCyprus.png) no-repeat 102px 1px !important;}
+.bg-eu-Estonia{background:url(../images/bgEuEstonia.png) no-repeat 102px 1px !important;}
+.bg-eu-Finland{background:url(../images/bgEuFinland.png) no-repeat 102px 1px !important;}
+.bg-eu-France{background:url(../images/bgEuFrance.png) no-repeat 102px 1px !important;}
+.bg-eu-Germany{background:url(../images/bgEuGermany.png) no-repeat 102px 1px !important;}
+.bg-eu-Greece{background:url(../images/bgEuGreece.png) no-repeat 102px 1px !important;}
+.bg-eu-Ireland{background:url(../images/bgEuIreland.png) no-repeat 102px 1px !important;}
+.bg-eu-Italy{background:url(../images/bgEuItaly.png) no-repeat 102px 1px !important;}
+.bg-eu-Latvia{background:url(../images/bgEuLatvia.png) no-repeat 102px 1px !important;}
+.bg-eu-Lituania{background:url(../images/bgEuLituania.png) no-repeat 102px 1px !important;}
+.bg-eu-Luxembourg{background:url(../images/bgEuLuxembourg.png) no-repeat 102px 1px !important;}
+.bg-eu-Malta{background:url(../images/bgEuMalta.png) no-repeat 102px 1px !important;}
+.bg-eu-Monaco2002{background:url(../images/bgEuMonaco.png) no-repeat 102px 1px !important;}
+.bg-eu-Monaco2005{background:url(../images/bgEuMonaco.png) no-repeat 102px -69px !important;}
+.bg-eu-Netherland1999{background:url(../images/bgEuNetherlands.png) no-repeat 102px 1px !important;}
+.bg-eu-Netherland2014{background:url(../images/bgEuNetherlands.png) no-repeat 102px -69px !important;}
+.bg-eu-Portugal{background:url(../images/bgEuPortugal.png) no-repeat 102px 1px !important;}
+.bg-eu-SanMarino2002{background:url(../images/bgEuSanMarino.png) no-repeat 102px 1px !important;}
+.bg-eu-SanMarino2017{background:url(../images/bgEuSanMarino.png) no-repeat 102px -69px !important;}
+.bg-eu-Slovakia{background:url(../images/bgEuSlovakia.png) no-repeat 102px 1px !important;}
+.bg-eu-Slovenia{background:url(../images/bgEuSlovenia.png) no-repeat 102px 1px !important;}
+.bg-eu-Spain1999{background:url(../images/bgEuSpain.png) no-repeat 102px 1px !important;}
+.bg-eu-Spain2010{background:url(../images/bgEuSpain.png) no-repeat 102px -69px !important;}
+.bg-eu-Spain2015{background:url(../images/bgEuSpain.png) no-repeat 102px -139px !important;}
+.bg-eu-VaticanCity2002{background:url(../images/bgEuVatican.png) no-repeat 102px 1px !important;}
+.bg-eu-VaticanCity2005{background:url(../images/bgEuVatican.png) no-repeat 102px -69px !important;}
+.bg-eu-VaticanCity2006{background:url(../images/bgEuVatican.png) no-repeat 102px -139px !important;}
+.bg-eu-VaticanCity2014{background:url(../images/bgEuVatican.png) no-repeat 102px -209px !important;}
+.bg-eu-VaticanCity2017{background:url(../images/bgEuVatican.png) no-repeat 102px -279px !important;}
+.bg-eu-Andorra{background:url(../images/bgEuAndorra.png) no-repeat 102px 1px !important;}
+
+/*.bg-eu-Belgium{background-position-y:-140px !important} 
+.bg-eu-Germany{background-position-y:-350px !important} 
+.bg-eu-Finland{background-position-y:-210px !important} 
+.bg-eu-France{background-position-y:-280px !important} 
+.bg-eu-Greece{background-position-y:-420px !important} 
+.bg-eu-Ireland{background-position-y:-490px !important} 
+.bg-eu-Italy{background-position-y:-560px !important} 
+.bg-eu-Luxembourg{background-position-y:-630px !important} 
+.bg-eu-Netherland{background-position-y:-770px !important} 
+.bg-eu-Austria{background-position-y:-70px !important} 
+.bg-eu-Portugal{background-position-y:-840px !important} 
+.bg-eu-Spain{background-position-y:-980px !important} 
+.bg-eu-Monaco{background-position-y:-700px !important} 
+.bg-eu-VaticanCity{background-position-y:-1050px !important} 
+.bg-eu-SanMarino{background-position-y:-910px !important} 
+.bg-eu-Latvia{background-position-y:-1120px !important} 
+.bg-eu-Lituania{background-position-y:-1190px !important} 
+.bg-eu-Malta{background-position-y:-1260px !important} 
+.bg-eu-Slovakia{background-position-y:-1330px !important} 
+.bg-eu-Slovenia{background-position-y:-1400px !important} 
+.bg-eu-Estonia{background-position-y:-1470px !important} 
+.bg-eu-Cyprus{background-position-y:-1540px !important} */
+
+/* 서브레이어 - 주성립 + ATB */
+#layerInner.typeListAtb table,
+#layerInner.typeListStates table{width:auto;}
+#layerInner.typeListAtb table tr,
+#layerInner.typeListStates table tr,
+#layerInner.typeListAtb table th,
+#layerInner.typeListStates table th,
+#layerInner.typeListAtb table td,
+#layerInner.typeListStates table td{height:100px;table-layout:fixed;word-wrap:break-word;word-break:break-all;padding:0;letter-spacing:0}
+/* #layerInner.typeListStates table tr{background: url(../images/eurocoins.png) no-repeat 102px 1px} */
+#layerInner.typeListAtb table td[data-field-type="v-coin1"]{background:url(../images/img-atb.png) no-repeat;}
+#layerInner.typeListStates table td[data-field-type="v-coin1"]{background:url(../images/img-states.png) no-repeat;}
+.v1999-01 td[data-field-type="v-coin1"]{background-position:3px 3px !important}
+.v1999-02 td[data-field-type="v-coin1"]{background-position:-104px 3px !important}
+.v1999-03 td[data-field-type="v-coin1"]{background-position:-211px 3px !important}
+.v1999-04 td[data-field-type="v-coin1"]{background-position:-318px 3px !important}
+.v1999-05 td[data-field-type="v-coin1"]{background-position:-425px 3px !important}
+.v2000-01 td[data-field-type="v-coin1"]{background-position:3px -127px !important}
+.v2000-02 td[data-field-type="v-coin1"]{background-position:-104px -127px !important}
+.v2000-03 td[data-field-type="v-coin1"]{background-position:-211px -127px !important}
+.v2000-04 td[data-field-type="v-coin1"]{background-position:-318px -127px !important}
+.v2000-05 td[data-field-type="v-coin1"]{background-position:-425px -127px !important}
+.v2001-01 td[data-field-type="v-coin1"]{background-position:3px -257px !important}
+.v2001-02 td[data-field-type="v-coin1"]{background-position:-104px -257px !important}
+.v2001-03 td[data-field-type="v-coin1"]{background-position:-211px -257px !important}
+.v2001-04 td[data-field-type="v-coin1"]{background-position:-318px -257px !important}
+.v2001-05 td[data-field-type="v-coin1"]{background-position:-425px -257px !important}
+.v2002-01 td[data-field-type="v-coin1"]{background-position:3px -387px !important}
+.v2002-02 td[data-field-type="v-coin1"]{background-position:-104px -387px !important}
+.v2002-03 td[data-field-type="v-coin1"]{background-position:-211px -387px !important}
+.v2002-04 td[data-field-type="v-coin1"]{background-position:-318px -387px !important}
+.v2002-05 td[data-field-type="v-coin1"]{background-position:-425px -387px !important}
+.v2003-01 td[data-field-type="v-coin1"]{background-position:3px -517px !important}
+.v2003-02 td[data-field-type="v-coin1"]{background-position:-104px -517px !important}
+.v2003-03 td[data-field-type="v-coin1"]{background-position:-211px -517px !important}
+.v2003-04 td[data-field-type="v-coin1"]{background-position:-318px -517px !important}
+.v2003-05 td[data-field-type="v-coin1"]{background-position:-425px -517px !important}
+.v2004-01 td[data-field-type="v-coin1"]{background-position:3px -647px !important}
+.v2004-02 td[data-field-type="v-coin1"]{background-position:-104px -647px !important}
+.v2004-03 td[data-field-type="v-coin1"]{background-position:-211px -647px !important}
+.v2004-04 td[data-field-type="v-coin1"]{background-position:-318px -647px !important}
+.v2004-05 td[data-field-type="v-coin1"]{background-position:-425px -647px !important}
+.v2005-01 td[data-field-type="v-coin1"]{background-position:3px -777px !important}
+.v2005-02 td[data-field-type="v-coin1"]{background-position:-104px -777px !important}
+.v2005-03 td[data-field-type="v-coin1"]{background-position:-211px -777px !important}
+.v2005-04 td[data-field-type="v-coin1"]{background-position:-318px -777px !important}
+.v2005-05 td[data-field-type="v-coin1"]{background-position:-425px -777px !important}
+.v2006-01 td[data-field-type="v-coin1"]{background-position:3px -907px !important}
+.v2006-02 td[data-field-type="v-coin1"]{background-position:-104px -907px !important}
+.v2006-03 td[data-field-type="v-coin1"]{background-position:-211px -907px !important}
+.v2006-04 td[data-field-type="v-coin1"]{background-position:-318px -907px !important}
+.v2006-05 td[data-field-type="v-coin1"]{background-position:-425px -907px !important}
+.v2007-01 td[data-field-type="v-coin1"]{background-position:3px -1037px !important}
+.v2007-02 td[data-field-type="v-coin1"]{background-position:-104px -1037px !important}
+.v2007-03 td[data-field-type="v-coin1"]{background-position:-211px -1037px !important}
+.v2007-04 td[data-field-type="v-coin1"]{background-position:-318px -1037px !important}
+.v2007-05 td[data-field-type="v-coin1"]{background-position:-425px -1037px !important}
+.v2008-01 td[data-field-type="v-coin1"]{background-position:3px -1167px !important}
+.v2008-02 td[data-field-type="v-coin1"]{background-position:-104px -1167px !important}
+.v2008-03 td[data-field-type="v-coin1"]{background-position:-211px -1167px !important}
+.v2008-04 td[data-field-type="v-coin1"]{background-position:-318px -1167px !important}
+.v2008-05 td[data-field-type="v-coin1"]{background-position:-425px -1167px !important}
+.v2009-01 td[data-field-type="v-coin1"]{background-position:3px -1297px !important}
+.v2009-02 td[data-field-type="v-coin1"]{background-position:-104px -1297px !important}
+.v2009-03 td[data-field-type="v-coin1"]{background-position:-211px -1297px !important}
+.v2009-04 td[data-field-type="v-coin1"]{background-position:-318px -1297px !important}
+.v2009-05 td[data-field-type="v-coin1"]{background-position:-425px -1297px !important}
+.v2009-06 td[data-field-type="v-coin1"]{background-position:-532px -1297px !important}
+
+/* 해외 국기 표시 */
+#layerInner table tr.v-flag-title td[data-field-type="v-name"]{background-image:url(../images/flag.png);background-repeat:no-repeat;}
+.v-country-USA td[data-field-type="v-name"]{background-position-y:0}
+.v-country-HKG td[data-field-type="v-name"]{background-position-y:-60px}
+.v-country-CHN td[data-field-type="v-name"]{background-position-y:-120px}
+.v-country-GBR td[data-field-type="v-name"]{background-position-y:-180px}
+.v-country-CAN td[data-field-type="v-name"]{background-position-y:-240px}
+.v-country-DEU td[data-field-type="v-name"]{background-position-y:-300px}
+.v-country-ESP td[data-field-type="v-name"]{background-position-y:-360px}
+.v-country-FRA td[data-field-type="v-name"]{background-position-y:-420px}
+.v-country-CZE td[data-field-type="v-name"]{background-position-y:-480px}
+.v-country-DNK td[data-field-type="v-name"]{background-position-y:-540px}
+.v-country-PHL td[data-field-type="v-name"]{background-position-y:-600px}
+.v-country-AUS td[data-field-type="v-name"]{background-position-y:-660px}
+.v-country-TWN td[data-field-type="v-name"]{background-position-y:-720px}
+.v-country-JPN td[data-field-type="v-name"]{background-position-y:-780px}
+.v-country-MYS td[data-field-type="v-name"]{background-position-y:-840px}
+.v-country-THA td[data-field-type="v-name"]{background-position-y:-900px}
+.v-country-IDN td[data-field-type="v-name"]{background-position-y:-960px}
+.v-country-UAE td[data-field-type="v-name"]{background-position-y:-1020px}
+.v-country-PRK td[data-field-type="v-name"]{background-position-y:-1080px}
+.v-country-ZAF td[data-field-type="v-name"]{background-position-y:-1140px}
+.v-country-KWT td[data-field-type="v-name"]{background-position-y:-1200px}
+.v-country-KEN td[data-field-type="v-name"]{background-position-y:-1260px}
+.v-country-RUS td[data-field-type="v-name"]{background-position-y:-1320px}
+.v-country-VEN td[data-field-type="v-name"]{background-position-y:-1380px}
+.v-country-SRB td[data-field-type="v-name"]{background-position-y:-1440px}
+.v-country-KHM td[data-field-type="v-name"]{background-position-y:-1500px}
+.v-country-MNG td[data-field-type="v-name"]{background-position-y:-1560px}
+.v-country-BRA td[data-field-type="v-name"]{background-position-y:-1620px}
+.v-country-EU td[data-field-type="v-name"]{background-position-y:-1680px}
+.v-country-NPL td[data-field-type="v-name"]{background-position-y:-1740px}
+.v-country-VNM td[data-field-type="v-name"]{background-position-y:-1800px}
+.v-country-MWI td[data-field-type="v-name"]{background-position-y:-1860px}
+.v-country-AFG td[data-field-type="v-name"]{background-position-y:-1920px}
+.v-country-YGS td[data-field-type="v-name"]{background-position-y:-1980px}
+.v-country-KOR td[data-field-type="v-name"]{background-position-y:-2040px}
+.v-country-SGP td[data-field-type="v-name"]{background-position-y:-2100px}
+/* .v-country- td[data-field-type="v-name"]{background-position-y:-2160px} */
+
+/* 예외처리 */
+td[data-field-type="v-image"],
+td[data-field-type="v-imageb"],
+td[data-field-type="v-country"],
+td[data-field-type="v-type"],
+#layerInner.typeListAtb td[data-field-type="v-nmeng"],
+#layerInner.typeListStates td[data-field-type="v-nmeng"],
+#layerInner.typeListEuro td[data-field-type="v-nmeng"],
+#layerInner.typeListEuro td[data-field-type="v-have"]{display:none}
+td[data-field-type="v-name"]{text-align: left;text-indent: 10px;letter-spacing: 0}
+
+/* 미리보기 레이어  */
+#preview_layer{position: fixed;z-index: 30;top:0;left:0;right:0;bottom:0;background: rgba(0,0,0,.7);display:none}
+#preview_layer .preview_wrap{height:100%;display:table;text-align:center;width:100%}
+#preview_layer .preview_wrap .preview_inner{display:table-cell;vertical-align:middle;}
+#preview_layer img{width:100%;position:relative;}
+#preview_layer span.img-title{position:fixed;top:0;left:0;right:0;height:60px;background:#000;text-align:center;color:#fff;line-height: 60px;border-bottom:1px solid rgba(255,255,255,.2);}
+#preview_layer span.img-wrap{position:relative}
+#preview_layer span.img-wrap img{opacity: 0;transform:translateY(-20px);transition: 1s all}
+#preview_layer span.img-wrap.img-v{width:40% !important;max-width:300px !important;min-width:150px !important;}
+/* 미리보기 레이어 - 지폐형 */
+#preview_layer.typeList1 span.img-wrap,
+#preview_layer.typeListForeignBanknotes span.img-wrap,
+#preview_layer.typeListCommemorativeBanknotes span.img-wrap{width:80%;max-width:600px;min-width:280px;padding:10px;display:inline-block;}
+/* 미리보기 레이어 - 동전형 */
+#preview_layer.typeList2 span.img-wrap,
+#preview_layer.typeListForeignCoin span.img-wrap,
+#preview_layer.typeListCommemorativeCoin span.img-wrap,
+#preview_layer.typeListStates span.img-wrap,
+#preview_layer.typeListAtb span.img-wrap,
+#preview_layer.typeListXmasSeal span.img-wrap{width:50%;max-width:400px;min-width:200px;padding:10px;display:inline-block;}
+/* 미리보기 레이어 - 우표 */
+#preview_layer.typeListStamp span.img-wrap{width:50%;max-width:500px;min-width:200px;padding:10px;display:inline-block;}
+
+	/*동전형 라운드 */
+	#preview_layer.typeList2 img,
+	#preview_layer.typeListForeignCoin img,
+	#preview_layer.typeListCommemorativeCoin img,
+	#preview_layer.typeListStates img,
+	#preview_layer.typeListAtb img{border-radius:50% 50%;overflow:hidden}
+
+/* 미리보기 레이어 - 민트세트 */
+#preview_layer.typeListMintages span.img-wrap{width:50%;max-width:200px;min-width:150px;padding:10px;display:inline-block;}
+
+/* HTML 로드 페이지 스타일 */
+#layerInner.typeHtml .ip{font-size:16px;font-weight: bold;line-height:24px}
+#layerInner.typeHtml .nm{font-weight: normal;letter-spacing:0}
+#layerInner.typeHtml table th,
+#layerInner.typeHtml table td{padding:10px}
+#layerInner.typeHtml table td{color:rgba(255,255,255,.7);line-height: 18px}
+#layerInner.typeHtml table td.tac,
+#layerInner.typeHtml table thead th,
+#layerInner.typeHtml table tbody th{text-align:center}
+#layerInner.typeHtml .wrap-image{width:100%;max-width:500px;padding-bottom:10px}
+#layerInner.typeHtml .wrap-image img{width:100%}
+#layerInner.typeHtml .wrap-image .wrap-source{padding:10px 0;margin-top:20px}
+#layerInner.typeHtml .wrap-image .img-euro{background-position-x:0 !important;}
+/* :: 유로설명 내 시리즈 구분 */
+#layerInner.typeHtml ul li{font-size:14px;color: rgba(255,255,255,.7);}
+/* :: America Quater 내 바로가기 */
+#layerInner.typeHtml .btn_detail_view{display:inline-block;padding:5px 20px;color: #fff;background:rgba(255,255,255,.2)}
+
+
+/* 자료출처표기 */
+.wrap-source{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;word-break:break-all;}
+.wrap-source *{font-family:Roboto, Droid Sans, Helvetica,'NanumSquareNeoLight','맑은고딕','Malgun Gothic' , AppleSDGothicNeo, 'Apple SD 산돌고딕 Neo', Apple-Gothic, '애플고딕', 'gulim', '굴림', 'Tahoma', 'dotum', '돋움',  sans-serif}
+.wrap-source .tit-source{font-size:14px;margin-bottom:10px;opacity: .8;letter-spacing:-1px}
+.wrap-source .txt-source{font-size:11px;line-height: 16px;opacity: .5;}

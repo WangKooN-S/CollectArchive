@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+#root{overflow:hidden;}
+.collect-content{position: fixed;top:50%;left:0;right:0;transform:translateY(-50%)}
+.collect-content .card{width:574px;height:347px;font-weight:900;color:#eee;position: relative;border-radius: 30px;box-sizing: border-box;background: rgba(0,0,0,.2)}
+.collect-content .standard{background:#1e1d1b !important}
+
+/* 메인 인트로 영역 */
+.collect-intro{text-align: center;position: absolute;top:0;left:50%;margin-left:-287px;z-index: 10}
+.swiper .collect-intro{position: relative;top:auto;left:auto;margin:0}
+.collect-intro__text{display: inline-block;text-align: left;padding-top:90px;position: relative}
+.collect-intro__text > span{display: block;}
+.collect-intro__text--ko{font-size:13px;font-weight:bold;color:#777777;letter-spacing: -.5px}
+.collect-intro__title{font-size:50px;line-height: 50px;letter-spacing: -3.5px;font-weight:900;color:#fff}
+.collect-intro__title.color--yellow{color:#ffdd23;letter-spacing: -1.4px}
+.collect-intro__icon{position: absolute;width:126px;height:126px;background: url(../images/ico_wcoin_reverse.png) no-repeat 0 0;right:-5px;top:35px}
+.collect-intro__btn-enter,
+.collect-intro__notice{font-size:20px;font-weight: bold;color:#1e1d1b;display: inline-block;padding:15px 0;width:134px;background:#ffdd23;line-height: 20px;margin-top:30px;transition:.3s all ease}
+.collect-intro__btn-enter:hover{background: #9b8101;}
+.collect-intro__notice{width:100%;background:#ffdd23;font-size:14px}
+.collect-intro__notice:hover{background:#ffdd23}
+.collect-main .swiper{width:90%;max-width:547px;height:347px;overflow: visible;margin:0 auto}
+.collect-main .swiper-slide{overflow: hidden;position: relative;cursor:pointer;}
+.collect-main .swiper-slide .bg_area{position:absolute;z-index: 0;top:0;width:100%;height:100%;left:30px;opacity: .6}
+.collect-main .collect-intro.swiper-slide .bg_area{z-index: -1;opacity: 1;left:0;}
+.collect-main .swiper-slide.swiper-slide-active{box-shadow: 2px 2px 0 rgba(0,0,0,1)}
+.collect-main .swiper-slide.swiper-slide-active .bg_area{animation: showBg .7s 1 linear;animation-fill-mode:both}
+@keyframes showBg {
+	from{left:30px;opacity:.6}
+  	to{left:0;opacity:1} 
+}
+.collect-wrap .swiper-pagination{width:100%;text-align:center;position:fixed;left:0;bottom:5%}
+.collect-wrap .swiper-pagination-bullet{width:30px;height:3px;margin:0 3px;background:#fff;border:0;border-radius:0;opacity:.5}
+.collect-wrap .swiper-pagination-bullet-active{opacity:1;}
+.collect-wrap .swiper-button-prev,
+.collect-wrap .swiper-button-next{color:#fff}
+
+/* 서브 카드 영역 */
+.collect-content .card{text-align: center;}
+.swiper .card-theme{display:flex;flex-direction: column;}
+.collect-card__top{display: block;position: relative;padding-top:40px;padding-left:40px;text-align: left;z-index:10;text-shadow: 0px 4px 10px rgba(0,0,0,.5);}
+.collect-card__img-theme{display: inline-block;color:#666666;font-size:14px;letter-spacing: -1px;font-weight: 400;height:18px;line-height: 18px}
+.collect-card__top .tit_nm{display: inline-block;height:50px;line-height:40px}
+.collect-card__title{display:block;}
+.collect-card__title.title--en{font-size:36px;color:#eeeeee;letter-spacing: -2px;padding-right:8px}
+.collect-card__title.title--ko{font-size:24px;position: relative;line-height: 30px;letter-spacing: -1px;padding-left:2px;font-weight: bold}
+.collect-card__bottom{text-indent:-9999em;z-index: 5;opacity: .25;margin-top:auto;padding:0 0 30px 40px;height:24px;background:url(../images/txt_card_bottom.png) no-repeat 40px 6px}

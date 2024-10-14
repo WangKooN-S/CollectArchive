@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*헤더영역*/
+.collect-header{position:fixed;top:0px;left:0;right:0;height:60px;background:rgba(0,0,0,.4);color:#fff;z-index: 2;transform: translateY(-60px);transition: 1s all}
+.collect-header.is-show{transform: translateY(0);}
+.collect-header__title{font-size:22px;text-align: left;letter-spacing:-1px;font-weight:900;line-height: 60px;padding:0 60px;}
+.collect-header__title .color--yellow{color:#ffdd23;}
+.menu-trigger,
+.menu-trigger span {display : inline-block;transition : all .4s;box-sizing : border-box;background:transparent}
+.menu-trigger {position:absolute;top:20px;left:20px;width:26px;height:20px;}
+.menu-trigger span{position:absolute;left:0;width:100%;height:2px;background-color:rgba(255,255,255,.5);border-radius:2px;}
+.menu-trigger span:nth-of-type(1){top:0;}
+.menu-trigger span:nth-of-type(2){top:9px;}
+.menu-trigger span:nth-of-type(3){bottom:0;}
+.menu-trigger.active span:nth-of-type(1){-webkit-transform:translateY(9px) rotate(-45deg);transform:translateY(9px) rotate(-45deg);}
+.menu-trigger.active span:nth-of-type(2){opacity:0;}
+.menu-trigger.active span:nth-of-type(3){-webkit-transform:translateY(-9px) rotate(45deg);transform:translateY(-9px) rotate(45deg);}
+.collect-header__link--home{position:absolute;width:40px;height:40px;top:12px;right:12px;opacity: .5;}
+.collect-header__link--home:hover{opacity: 1}
+.collect-header__link--home img{width:100%;}
+/* .active + .menu-allmenu{} */
+.menu-allmenu{position:absolute;top:60px;left:0;right:0;background:rgba(0,0,0,.9);padding:0px 60px 0px;height:0;transition: height .5s;overflow:hidden}
+.menu-allmenu ul{overflow: hidden;letter-spacing:-1px}
+.menu-allmenu ul li{width:250px;float:left;text-align:left;padding-bottom:40px;height:240px;}
+.menu-allmenu ul li .tit{width:30px;border-bottom:2px solid #fff;font-size:20px;line-height:46px;font-weight:900;color:#fff;margin-bottom:4px;cursor:pointer;}
+.menu-allmenu ul li .tit .tit-wrap{width:250px;display:block}
+.menu-allmenu ul li > a{display:block;width:100%;line-height:28px;color:#a1a1a1;font-size:15px;}
+.menu-allmenu ul li > a:hover{color:#eee;}
