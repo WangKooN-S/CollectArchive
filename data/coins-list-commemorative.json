@@ -1,0 +1,38 @@
+{
+    "type" : "typeListCommemorativeCoin",
+    "title" : "기념주화/메달 소장리스트",
+    "txtTarget" : "",
+    "urlBase" : "https://colnect.com/ko/coins/coin/",
+    "source" : [
+        {
+            "title" : "Colnect",
+            "keyword" : "주화 - 국가별",
+            "url" : "https://colnect.com/ko/coins/countries",
+            "date" : "2018.11.09"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"주화명","width":300,"row":2,"col":1},                
+                {"name":"액면가","width":60,"row":2,"col":1},
+                {"name":"발행년도","width":50,"row":2,"col":1},
+                {"name":"도감번호","width":50,"row":2,"col":1},   
+                {"name":"발행수량","width":50,"row":2,"col":1},
+                {"name":"보유여부","width":30,"row":2,"col":1},   
+                {"name":"상태","width":200,"row":1,"col":7},
+                {"name":"정보","width":"auto","row":2,"col":1}
+            ],[
+                {"name":"VG","width":25,"row":1,"col":1},
+                {"name":"F","width":25,"row":1,"col":1},
+                {"name":"VF","width":25,"row":1,"col":1},
+                {"name":"XF","width":25,"row":1,"col":1},
+                {"name":"AU","width":25,"row":1,"col":1},
+                {"name":"UNC","width":25,"row":1,"col":1},
+                {"name":"PROOF","width":25,"row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/8_coins_commemorative?alt=json&key=",
+    "tableData" : []  
+}

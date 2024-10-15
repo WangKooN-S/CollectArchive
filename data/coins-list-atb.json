@@ -1,0 +1,28 @@
+{
+    "type" : "typeListAtb",
+    "title" : "미국의 아름다운 풍경 주화 소장리스트",
+    "txtTarget" : "목표: America the Beautiful 주화 연도별 완집",
+    "urlBase" : "https://colnect.com/ko/coins/coin/",
+    "source" : [
+        {
+            "title" : "위키백과",
+            "keyword" : "America_the_Beautiful_Quarters",
+            "url" : "https://en.wikipedia.org/wiki/America_the_Beautiful_Quarters",
+            "date" : "2018.10.23"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"주화명","width":120,"row":1,"col":1},                
+                {"name":"발행년도","width":60,"row":1,"col":1},
+                {"name":"보유여부","width":50,"row":1,"col":1},   
+                {"name":"이미지","width":100,"row":1,"col":1},
+                {"name":"도안설명","width":"auto","row":1,"col":1},                
+                {"name":"정보","width":70,"row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/5_coins_atb?alt=json&key=",
+    "tableData" : []
+}

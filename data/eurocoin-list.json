@@ -1,0 +1,32 @@
+{
+    "type" : "typeListEuro",
+    "title" : "유로 주화 소장리스트",
+    "txtTarget" : "목표: 국가별 유로주화 완집",
+    "urlBase" : "https://colnect.com/ko/coins/coin/",
+    "source" : [
+        {
+            "title" : "EUROPEAN CENTRAL BANK",
+            "keyword" : "The Euro Coins",
+            "url" : "https://www.ecb.europa.eu/euro/coins/html/index.en.html",
+            "date" : "2018.10.23"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"국가명","width":100,"row":1,"col":1},
+                {"name":"€ 0.01","width":69,"row":1,"col":1},
+                {"name":"€ 0.02","width":69,"row":1,"col":1},
+                {"name":"€ 0.05","width":69,"row":1,"col":1},
+                {"name":"€ 0.1","width":69,"row":1,"col":1},
+                {"name":"€ 0.2","width":69,"row":1,"col":1},
+                {"name":"€ 0.5","width":69,"row":1,"col":1},
+                {"name":"€ 1","width":69,"row":1,"col":1},
+                {"name":"€ 2","width":69,"row":1,"col":1},
+                {"name":"정보","width":"auto","row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/3_coins_euro?alt=json&key=",
+    "tableData" : []
+}

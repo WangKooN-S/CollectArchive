@@ -1,0 +1,40 @@
+{
+    "type" : "typeListXmasSeal",
+    "title" : "크리스마스씰 소장리스트",
+    "txtTarget" : "",
+    "urlBase" : "https://colnect.com/ko/coins/coin/",
+    "source" : [
+        {
+            "title" : "대한결핵협회",
+            "keyword" : "크리스마스씰",
+            "url" : "https://loveseal.knta.or.kr/",
+            "date" : "2021.08.21"
+        },
+        {
+            "title" : "시나브로의 세계화폐(blog)",
+            "keyword" : "크리스마스 씰",
+            "url" : "https://blog.naver.com/PostList.naver?blogId=ssw1971&categoryNo=257&from=thumbnailList&parentCategoryNo=0",
+            "date" : "2021.08.21"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"시리즈명","width":280,"row":2,"col":1},
+                {"name":"발행처","width":100,"row":2,"col":1},
+                {"name":"액면가","width":60,"row":2,"col":1},
+                {"name":"발행년도","width":50,"row":2,"col":1},
+                {"name":"도감번호","width":50,"row":2,"col":1},   
+                {"name":"보유여부","width":60,"row":2,"col":1},   
+                {"name":"상태","width":150,"row":1,"col":3},
+                {"name":"정보","width":"auto","row":2,"col":1}
+            ],[
+                {"name":"사용제","width":50,"row":1,"col":1},                
+                {"name":"미사용<br/>(단품)","width":50,"row":1,"col":1},
+                {"name":"미사용<br/>(전지)","width":50,"row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/12_xmas_seal?alt=json&key=",
+    "tableData" : []  
+}
