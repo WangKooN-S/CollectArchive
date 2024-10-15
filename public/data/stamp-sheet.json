@@ -1,0 +1,34 @@
+{
+    "type" : "typeListStamp",
+    "title" : "우표 소장 리스트 (전지)",
+    "txtTarget" : "",
+    "urlBase" : "https://colnect.com/ko/stamps/stamp/",
+    "source" : [
+        {
+            "title" : "Colnect",
+            "keyword" : "우표 - 국가별",
+            "url" : "https://colnect.com/ko/stamps/countries",
+            "date" : "2021.08.21"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"시리즈","width":260,"row":2,"col":1},
+                {"name":"도안","width":160,"row":2,"col":1},
+                {"name":"액면가","width":60,"row":2,"col":1},
+                {"name":"발행년도","width":50,"row":2,"col":1},
+                {"name":"인쇄기법","width":70,"row":2,"col":1},   
+                {"name":"도감번호","width":50,"row":2,"col":1},   
+                {"name":"보유여부","width":50,"row":2,"col":1},   
+                {"name":"상태","width":120,"row":1,"col":2},
+                {"name":"정보","width":"auto","row":2,"col":1}
+            ],[
+                {"name":"사용제","width":60,"row":1,"col":1},                
+                {"name":"미사용","width":60,"row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/11_stamp_sheet?alt=json&key=",
+    "tableData" : []  
+}

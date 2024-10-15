@@ -14,8 +14,7 @@ const MainContent = ({ handleHeader }) => {
     const [themes, setThemes] = useState([]);
     const [showSwiper, setShowSwiper] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [isSubLayerVisible, setIsSubLayerVisible] = useState(false);
-    const [lastClickedIndex, setLastClickedIndex] = useState(null);
+    const [isSubLayerVisible, setIsSubLayerVisible] = useState(false);    
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -32,16 +31,15 @@ const MainContent = ({ handleHeader }) => {
     };
 
     // 슬라이드 클릭 이벤트
-    const handleSlideClick = (index) => {     
-        console.log( index, swiperRef.current)   
+    const handleSlideClick = (index) => {        
         if (swiperRef.current) {
-            if (lastClickedIndex === index) {
+            if (swiperRef.current.activeIndex === index) {
+                handleHeader(false);
                 setIsSubLayerVisible(true);
             } else {
                 swiperRef.current.slideTo(index);
                 setActiveIndex(index);
                 setIsSubLayerVisible(false);
-                setLastClickedIndex(index);
             }
         }
     };
@@ -49,10 +47,10 @@ const MainContent = ({ handleHeader }) => {
     // 서브 레이어 렌더링
     const renderSubLayer = (theme) => {
         return (
-            <SubLayer theme={theme} isShow={true} slideTo={activeIndex}/>
+            <SubLayer theme={theme} isShow={isSubLayerVisible} onClose={() => {setIsSubLayerVisible(false);handleHeader(true)}}/>
         );
     };
-       
+    
     return (
     <>
         <section id="contents" className="collect-content" role="region" aria-labelledby="intro-heading">
@@ -72,6 +70,7 @@ const MainContent = ({ handleHeader }) => {
                     <>
                         <Swiper
                             modules={[Navigation, Pagination]}
+                            speed = {400}
                             spaceBetween={30}
                             slidesPerView={1}
                             pagination={{ el: '.swiper-pagination', clickable: true }}
@@ -79,8 +78,6 @@ const MainContent = ({ handleHeader }) => {
                             onSlideChange={(swiper) => {
                                 setActiveIndex(swiper.activeIndex);
                                 setIsSubLayerVisible(false);
-                                setLastClickedIndex(null);
-                                console.log(isSubLayerVisible)
                             }}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
@@ -123,12 +120,13 @@ const MainContent = ({ handleHeader }) => {
                 )}
             </div>        
         </section>
-        <div className="swiper-pagination"></div>        
+        <div className="swiper-pagination"></div>
+
         {isSubLayerVisible && activeIndex !== null && activeIndex !== 0 && ReactDOM.createPortal(
             renderSubLayer(themes[activeIndex-1]),
             document.getElementById('root')
         )}
-    </>
+    </> 
     );
 };
 

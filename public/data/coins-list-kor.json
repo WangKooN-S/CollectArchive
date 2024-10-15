@@ -1,0 +1,43 @@
+{
+    "type" : "typeList2",
+    "title" : "대한민국 주화 소장리스트",
+    "txtTarget" : "목표: 대한제국 주화 종류별 + 현행주화 연도별 완집",
+    "urlBase" : "https://colnect.com/ko/coins/coin/",
+    "source" : [
+        {
+            "title" : "Colnect",
+            "keyword" : "대한민국",
+            "url" : "https://colnect.com/ko/coins/series/country/2050",
+            "date" : "2018.10.23"
+        },{
+            "title" : "Colnect",
+            "keyword" : "대한제국",
+            "url" : "https://colnect.com/ko/coins/list/country/2048/series/271732",
+            "date" : "2018.10.23"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"권종","width":150,"row":2,"col":1},
+                {"name":"액면가","width":80,"row":2,"col":1},
+                {"name":"발행년도","width":80,"row":2,"col":1},
+                {"name":"발행처","width":80,"row":2,"col":1},
+                {"name":"발행량","width":80,"row":2,"col":1},
+                {"name":"보유여부","width":60,"row":2,"col":1},
+                {"name":"상태","width":"auto","row":1,"col":7},
+                {"name":"정보","width":50,"row":2,"col":1}
+            ],[
+                {"name":"VG","width":25,"row":1,"col":1},
+                {"name":"F","width":25,"row":1,"col":1},
+                {"name":"VF","width":25,"row":1,"col":1},
+                {"name":"XF","width":25,"row":1,"col":1},
+                {"name":"AU","width":25,"row":1,"col":1},
+                {"name":"UNC","width":25,"row":1,"col":1},
+                {"name":"PROOF","width":25,"row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/2_coins_kor?alt=json&key=",
+    "tableData" : []
+}

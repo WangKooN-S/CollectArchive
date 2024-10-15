@@ -1,0 +1,33 @@
+{
+    "type" : "typeListForeignCoin",
+    "title" : "외국 주화 소장리스트",
+    "txtTarget" : "",
+    "urlBase" : "https://colnect.com/ko/coins/coin/",
+    "source" : [
+        {
+            "title" : "Colnect",
+            "keyword" : "주화 - 국가별",
+            "url" : "https://colnect.com/ko/coins/countries",
+            "date" : "2018.11.09"
+        }
+    ],
+    "tableHeader" : {        
+        "list" : [
+            [
+                {"name":"주화명","width":250,"row":2,"col":1},                
+                {"name":"액면가","width":60,"row":2,"col":1},
+                {"name":"발행년도","width":50,"row":2,"col":1},
+                {"name":"도감번호","width":50,"row":2,"col":1},   
+                {"name":"보유여부","width":30,"row":2,"col":1},   
+                {"name":"상태","width":150,"row":1,"col":3},
+                {"name":"정보","width":"auto","row":2,"col":1}
+            ],[
+                {"name":"사용","width":50,"row":1,"col":1},                
+                {"name":"사용(상)","width":50,"row":1,"col":1},
+                {"name":"미사용","width":50,"row":1,"col":1}
+            ]
+        ]
+    },
+    "googleSheet" : "https://sheets.googleapis.com/v4/spreadsheets/10NZhaE5zgRMMwAnVmD405m3GMziy5k5cBVbq35Sndjc/values/6_coins_foreign?alt=json&key=",
+    "tableData" : []  
+}

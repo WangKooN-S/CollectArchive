@@ -79,7 +79,7 @@
                 "hash": "myKorBanknotes",
                 "title": "소장품 리스트",
                 "type": "list",
-                "src": "src/banknote-list-kor.js"
+                "src": "data/banknote-list-kor.json"
             }
         ]
     },
@@ -112,7 +112,7 @@
                 "hash": "myKorCoins",
                 "title": "소장품 리스트",
                 "type": "list",
-                "src": "src/coins-list-kor.js"
+                "src": "data/coins-list-kor.json"
             }
         ]
     },
@@ -133,7 +133,7 @@
                 "hash": "myEuroCoins",
                 "title": "소장품 리스트",
                 "type": "list",
-                "src": "src/eurocoin-list.js"
+                "src": "data/eurocoin-list.json"
             }
         ]
     },
@@ -160,13 +160,13 @@
                 "hash": "myStatesCoins",
                 "title": "소장리스트(States)",
                 "type": "list",
-                "src": "src/coins-list-states.js"
+                "src": "data/coins-list-states.json"
             },
             {
                 "hash": "myATBCoins",
                 "title": "소장리스트(ATB)",
                 "type": "list",
-                "src": "src/coins-list-atb.js"
+                "src": "data/coins-list-atb.json"
             }
         ]
     },
@@ -187,7 +187,7 @@
                 "hash": "myMintSet",
                 "title": "소장품 리스트",
                 "type": "list",
-                "src": "src/mintages-list.js"
+                "src": "data/mintages-list.json"
             }
         ]
     },
@@ -214,13 +214,13 @@
                 "hash": "myComCoins",
                 "title": "소장리스트(기념주화)",
                 "type": "list",
-                "src": "src/coins-list-commemorative.js"
+                "src": "data/coins-list-commemorative.json"
             },
             {
                 "hash": "myComBanknotes",
                 "title": "소장리스트(기념지폐)",
                 "type": "list",
-                "src": "src/banknote-list-commemorative.js"
+                "src": "data/banknote-list-commemorative.json"
             }
         ]
     },
@@ -247,13 +247,13 @@
                 "hash": "myForeignCoins",
                 "title": "소장리스트(외국주화)",
                 "type": "list",
-                "src": "src/coins-list-foreign.js"
+                "src": "data/coins-list-foreign.json"
             },
             {
                 "hash": "myForeignBanknotes",
                 "title": "소장리스트(외국지폐)",
                 "type": "list",
-                "src": "src/banknote-list-foreign.js"
+                "src": "data/banknote-list-foreign.json"
             }
         ]
     },
@@ -280,19 +280,19 @@
                 "hash": "myStampSheet",
                 "title": "소장리스트(전지)",
                 "type": "list",
-                "src": "src/stamp-sheet.js"
+                "src": "data/stamp-sheet.json"
             },
             {
                 "hash": "myStampSMSheet",
                 "title": "소장리스트(소형시트)",
                 "type": "list",
-                "src": "src/stamp-smsheet.js"
+                "src": "data/stamp-smsheet.json"
             },
             {
                 "hash": "myStampSingle",
                 "title": "소장리스트(낱장)",
                 "type": "list",
-                "src": "src/stamp-single.js"
+                "src": "data/stamp-single.json"
             }
         ]
     },
@@ -313,7 +313,7 @@
                 "hash": "myXmasSeal",
                 "title": "소장리스트",
                 "type": "list",
-                "src": "src/xmas-seal-list.js"
+                "src": "data/xmas-seal-list.json"
             }
         ]
     }
