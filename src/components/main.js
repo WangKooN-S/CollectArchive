@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
-import themeData from '../data/theme.json'; // 테마 JSON
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -10,7 +9,7 @@ import 'swiper/css/pagination';
 import mainBackground from '../images/bg_slide_main_blk.png';
 import SubLayer from './subLayer';
 
-const MainContent = ({ handleHeader }) => {
+const MainContent = ({ handleHeader, themeData }) => {
     const [themes, setThemes] = useState([]);
     const [showSwiper, setShowSwiper] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);

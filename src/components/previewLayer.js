@@ -28,6 +28,7 @@ const PreviewLayer = ({data, isPreviewShow, setIsPreviewShow }) => {
         setIsImageLoaded(true); // 이미지가 로드되면 상태 업데이트
     };
 
+    // 이미지 렌더링
     const renderImage = () => {
         const images = [];
         if (data.image) {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Loader from './components/loader';
 import Header from './components/header';
 import MainContent from './components/main';
+import themeData from './data/theme.json';
 import './App.css';
 
 function App() {
@@ -37,8 +38,8 @@ function App() {
     <div className="App">
       {isLoading && <Loader />}
       <main id="wrapper" className="collect-wrap">
-        <Header />
-        <MainContent handleHeader={handleHeader}/>
+        <Header themeData={themeData} />
+        <MainContent handleHeader={handleHeader} themeData={themeData}/>
       </main>
     </div>
   );
