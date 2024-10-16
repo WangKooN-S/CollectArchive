@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CollectArchive/static/css/main.9f1a6f97.css",
+    "main.css": "/CollectArchive/static/css/main.b0dc5a5e.css",
     "main.js": "/CollectArchive/static/js/main.a6514713.js",
     "static/js/453.b1cdc69f.chunk.js": "/CollectArchive/static/js/453.b1cdc69f.chunk.js",
     "static/media/eurocoins.png": "/CollectArchive/static/media/eurocoins.bc6a8549762ddb617ea7.png",
@@ -85,12 +85,12 @@
     "static/media/bg_tm06.jpg": "/CollectArchive/static/media/bg_tm06.6725be6d69847a384137.jpg",
     "static/media/logo.svg": "/CollectArchive/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/CollectArchive/index.html",
-    "main.9f1a6f97.css.map": "/CollectArchive/static/css/main.9f1a6f97.css.map",
+    "main.b0dc5a5e.css.map": "/CollectArchive/static/css/main.b0dc5a5e.css.map",
     "main.a6514713.js.map": "/CollectArchive/static/js/main.a6514713.js.map",
     "453.b1cdc69f.chunk.js.map": "/CollectArchive/static/js/453.b1cdc69f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f1a6f97.css",
+    "static/css/main.b0dc5a5e.css",
     "static/js/main.a6514713.js"
   ]
 }
