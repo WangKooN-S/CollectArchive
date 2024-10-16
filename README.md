@@ -1,15 +1,24 @@
 # Koonie Collection (Renewal Version)
 
-[Koonie Collection](https://github.com/WangKooN-S/CollectArchive) 프로젝트는 화폐 수집과 관련된 정보를 제공하고 개인 소장품 리스트를 관리하는 웹 애플리케이션입니다.
+[Koonie Collection](https://wangkoon-s.github.io/CollectArchive/) 프로젝트는 화폐 수집과 관련된 정보를 제공하고 개인 소장품 리스트를 관리하는 웹 애플리케이션입니다.
 
 ## 프로젝트 설명
 
-Koonie Collection는 화폐 수집에 대한 정보 제공 하며 개인 소장품 목록을 관리 하는 웹 어플리케이션 입니다.
+본 프로젝트는 화폐 수집과 관련된 정보를 제공하고 개인 소장품 리스트를 관리하는 웹 애플리케이션입니다.
 
 ## 업데이트 내역
 
-- **Legacy Version**: 초기 버전은 HTML과 JQuery를 기반으로 제작되었으며, 데이터 소스로 Google Sheet를 사용하였습니다.
-- **Renewal Version**: 2018년에 제작된 페이지를 기반으로, 최신 기술 스택인 React를 사용하여 프로젝트를 리뉴얼하였습니다.
+- **Legacy Version (2018)**:  초기 버전은 HTML과 JQuery를 기반으로 제작되었으며, 데이터 소스로 Google Sheet를 사용하였습니다.
+- **Renewal Version (2024)**: 2018년에 제작된 페이지를 기반으로, 최신 기술 스택인 React를 사용하여 프로젝트를 리뉴얼하였습니다.
+
+## 기술 스택
+
+- **사용 언어**: JavaScript, HTML, CSS
+- **프레임워크 및 라이브러리**: 
+  - **Legacy 프로젝트**: JQuery
+  - **Renewal 프로젝트**: React
+- **데이터베이스**: Google Sheets API
+- **기여도**: 기획 / UI 설계 / 코드 작성 100%
 
 ## Available Scripts
 
@@ -47,3 +56,20 @@ Koonie Collection는 화폐 수집에 대한 정보 제공 하며 개인 소장�
 대신 모든 구성 파일과 전이적 종속성(webpack, Babel, ESLint 등)을 프로젝트에 복사하여 완전한 제어권을 가질 수 있습니다. `eject`를 제외한 모든 명령어는 여전히 작동하지만, 복사된 스크립트를 가리키므로 이를 자유롭게 수정할 수 있습니다. 이 시점부터는 스스로 관리해야 합니다.
 
 `eject`를 사용할 필요는 없습니다. 큐레이팅된 기능 세트는 소규모 및 중규모 배포에 적합합니다.
+
+## 프로젝트 설치 및 실행
+
+1. **저장소 클론**:
+   ```bash
+   git clone https://github.com/WangKooN-S/CollectArchive.git
+   cd CollectArchive
+
+2. **의존성 설치**
+    `npm install`
+
+3. **개발 서버 실행**
+    `npm start`
+
+
+## 작성자
+    - WangKooN [(EMAIL)](mailto:wangsub.shin@gmail.com)
