@@ -1,6 +1,6 @@
 # Koonie Collection (Renewal Version)
 
-[Koonie Collection](https://wangkoon-s.github.io/CollectArchive/) 프로젝트는 화폐 수집과 관련된 정보를 제공하고 개인 소장품 리스트를 관리하는 웹 애플리케이션입니다.
+[Koonie Collection](https://wangkoon-s.github.io/CollectArchive/)
 
 ## 프로젝트 설명
 
@@ -8,8 +8,10 @@
 
 ## 업데이트 내역
 
-- **Legacy Version (2018)**:  초기 버전은 HTML과 JQuery를 기반으로 제작되었으며, 데이터 소스로 Google Sheet를 사용하였습니다.
-- **Renewal Version (2024)**: 2018년에 제작된 페이지를 기반으로, 최신 기술 스택인 React를 사용하여 프로젝트를 리뉴얼하였습니다.
+- **Legacy Version (2018)**
+    - 초기 버전은 HTML과 JQuery를 기반으로 제작되었으며, 데이터 소스로 Google Sheet를 사용하였습니다.
+- **Renewal Version (2024)** 
+    - 2018년에 제작된 페이지를 기반으로, 최신 기술 스택인 React를 사용하여 프로젝트를 리뉴얼하였습니다.
 
 ## 기술 스택
 
