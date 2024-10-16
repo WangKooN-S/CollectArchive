@@ -65,12 +65,17 @@
    ```bash
    git clone https://github.com/WangKooN-S/CollectArchive.git
    cd CollectArchive
+   ```
 
 2. **의존성 설치**
-    `npm install`
+    ```bash
+    npm install
+    ```
 
 3. **개발 서버 실행**
-    `npm start`
+    ```bash
+    npm start
+    ```
 
 
 ## 작성자
