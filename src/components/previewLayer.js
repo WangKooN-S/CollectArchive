@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const PreviewLayer = ({data, isPreviewShow, setIsPreviewShow }) => {
+const PreviewLayer = ({data, isPreviewShow, setIsPreviewShow, setIsLoading }) => {    
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const handleClick = () => {
@@ -21,12 +21,27 @@ const PreviewLayer = ({data, isPreviewShow, setIsPreviewShow }) => {
     }, []);
 
     useEffect(() => {
-        setIsImageLoaded(false); // 이미지 로드 상태 초기화
+        setIsImageLoaded(false); // 이미지 로드 상태 초기화        
     }, [data, isPreviewShow]);
 
     const handleImageLoad = () => {
         setIsImageLoaded(true); // 이미지가 로드되면 상태 업데이트
+        handleLoaderClose(); // 로딩 상태 해제
     };
+
+    const handleImageError = () => {
+        handleLoaderClose();
+    };
+
+    // 로더 닫기 이벤트
+    const handleLoaderClose = () => {
+        if ( document.querySelector('.loader') !== null){
+            document.querySelector('.loader').style.opacity = 0;
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 500);
+        }
+    }
 
     // 이미지 렌더링
     const renderImage = () => {
@@ -34,14 +49,14 @@ const PreviewLayer = ({data, isPreviewShow, setIsPreviewShow }) => {
         if (data.image) {
             images.push(
                 <span key="img-no1" className="img-wrap img-no1">
-                    <img src={data.image} onLoad={handleImageLoad} style={{ opacity: isImageLoaded ? 1 : 0, transform: 'translateY(0px)' }} alt="Image 1" />
+                    <img src={data.image} onLoad={handleImageLoad} onError={handleImageError} style={{ opacity: isImageLoaded ? 1 : 0, transform: 'translateY(0px)' }} alt="Image 1" />
                 </span>
             );
         }
         if (data.imageb) {
             images.push(
                 <span key="img-no2" className="img-wrap img-no2">
-                    <img src={data.imageb} onLoad={handleImageLoad} style={{ opacity: isImageLoaded ? 1 : 0, transform: 'translateY(0px)' }} alt="Image 2" />
+                    <img src={data.imageb} onLoad={handleImageLoad} onError={handleImageError} style={{ opacity: isImageLoaded ? 1 : 0, transform: 'translateY(0px)' }} alt="Image 2" />
                 </span>
             );
         }

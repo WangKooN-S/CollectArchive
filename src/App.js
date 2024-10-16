@@ -39,7 +39,7 @@ function App() {
       {isLoading && <Loader />}
       <main id="wrapper" className="collect-wrap">
         <Header themeData={themeData} />
-        <MainContent handleHeader={handleHeader} themeData={themeData}/>
+        <MainContent handleHeader={handleHeader} themeData={themeData} setIsLoading={setIsLoading}/>
       </main>
     </div>
   );

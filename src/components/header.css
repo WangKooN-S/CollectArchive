@@ -21,8 +21,8 @@
 
 .collect-nav{position:absolute;top:60px;left:0;right:0;background:rgba(0,0,0,.9);padding:0px 60px 0px;height:0;transition: height .5s;overflow:hidden}
 .collect-nav__list{overflow: hidden;width:100%;display:flex;flex-wrap:wrap}
-.collect-nav__section{width:250px;text-align:left;padding-bottom:40px;height:240px;}
-.collect-nav__head{width:30px;border-bottom:2px solid var(--var-main-color);font-size:20px;line-height:46px;font-weight:900;color:#fff;margin-bottom:4px;cursor:pointer;}
+.collect-nav__section{width:250px;text-align:left;padding-bottom:40px;}
+.collect-nav__head{width:30px;border-bottom:2px solid var(--var-main-color);font-size:20px;line-height:46px;font-weight:900;color:#fff;margin-bottom:12px;cursor:pointer;}
 .collect-nav__title{width:250px;display:block;font-size:20px;}
-.collect-nav__link{display:block;width:100%;line-height:28px;color:#a1a1a1;font-size:15px;}
+.collect-nav__link{display:block;line-height:24px;color:#aaa;font-size:14px;font-weight:500;letter-spacing:-.5px}
 .collect-nav__link:hover{color:#eee;}

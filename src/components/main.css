@@ -21,10 +21,10 @@
 .collect-intro__notice{width:100%;background:#ffdd23;font-size:14px}
 .collect-intro__notice:hover{background:#ffdd23}
 .collect-main .swiper{width:90%;max-width:547px;height:347px;overflow: visible;margin:0 auto}
-.collect-main .swiper-slide{overflow: hidden;position: relative;cursor:pointer;}
+.collect-main .swiper-slide{overflow: hidden;position: relative;cursor:pointer;transition:.3s all ease;transform:scale(0.85)}
 .collect-main .swiper-slide .bg_area{position:absolute;z-index: 0;top:0;width:100%;height:100%;left:30px;opacity: .6}
 .collect-main .collect-intro.swiper-slide .bg_area{z-index: -1;opacity: 1;left:0;}
-.collect-main .swiper-slide.swiper-slide-active{box-shadow: 2px 2px 0 rgba(0,0,0,1)}
+.collect-main .swiper-slide.swiper-slide-active{box-shadow: 2px 2px 0 rgba(0,0,0,1);transform:scale(1)}
 .collect-main .swiper-slide.swiper-slide-active .bg_area{animation: showBg .7s 1 linear;animation-fill-mode:both}
 @keyframes showBg {
 	from{left:30px;opacity:.6}
@@ -34,14 +34,22 @@
 .collect-wrap .swiper-pagination-bullet{width:30px;height:3px;margin:0 3px;background:#fff;border:0;border-radius:0;opacity:.5}
 .collect-wrap .swiper-pagination-bullet-active{opacity:1;}
 .collect-wrap .swiper-button-prev,
-.collect-wrap .swiper-button-next{color:#fff}
+.collect-wrap .swiper-button-next{color:#fff;transition:.3s all ease}
+.collect-wrap .swiper-button-prev{transform:translateX(-50px)}
+.collect-wrap .swiper-button-next{transform:translateX(50px)}
+.collect-wrap .is-arr-active .swiper-button-prev,
+.collect-wrap .is-arr-active .swiper-button-next{transform:translateX(0)}
 
 /* 서브 카드 영역 */
 .collect-content .card{text-align: center;}
 .swiper .card-theme{display:flex;flex-direction: column;}
-.collect-card__top{display: block;position: relative;padding-top:40px;padding-left:40px;text-align: left;z-index:10;text-shadow: 0px 4px 10px rgba(0,0,0,.5);}
+.collect-card__top{display: block;position: relative;padding-top:40px;padding-left:40px;text-align: left;z-index:10;text-shadow: 0px 4px 10px rgba(0,0,0,.5);transition:1s all ease}
 .collect-card__img-theme{display: inline-block;color:#666666;font-size:14px;letter-spacing: -1px;font-weight: 400;height:18px;line-height: 18px;text-transform: uppercase;}
 .collect-card__title{display:block;}
-.collect-card__title.title--en{font-size:36px;color:#eeeeee;letter-spacing: -2px;padding-right:8px;font-weight:900}
+.collect-card__title.title--en{font-size:36px;color:#eeeeee;letter-spacing: -2px;padding-right:8px;font-weight:900;transition:1s all ease}
+.swiper-slide-active .collect-card__top{padding-top:32px}
+.swiper-slide-active .collect-card__title.title--en{font-size:42px;}
 .collect-card__title.title--ko{font-size:24px;position: relative;line-height: 30px;letter-spacing: -1px;padding-left:2px;font-weight: bold}
+.collect-card__list{padding:30px 0 0 40px;text-align:left;font-weight:400;z-index:10;color:rgba(255,255,255,.2);font-size:14px;line-height:1.4;letter-spacing:-.5px}
+.collect-card__item:before{content:"";display: inline-block;width: 4px; height: 4px;border-radius: 50%;background-color: rgba(255,255,255,.1);margin-right: 5px;vertical-align: 3px;}
 .collect-card__bottom{text-indent:-9999em;z-index: 5;opacity: .25;margin-top:auto;padding:0 0 30px 40px;height:24px;background:url(../images/txt_card_bottom.png) no-repeat 40px 6px}

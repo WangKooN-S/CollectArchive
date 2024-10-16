@@ -9,11 +9,11 @@ import 'swiper/css/pagination';
 import mainBackground from '../images/bg_slide_main_blk.png';
 import SubLayer from './subLayer';
 
-const MainContent = ({ handleHeader, themeData }) => {
+const MainContent = ({ handleHeader, themeData, setIsLoading }) => {
     const [themes, setThemes] = useState([]);
     const [showSwiper, setShowSwiper] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [isSubLayerVisible, setIsSubLayerVisible] = useState(false);    
+    const [isSubLayerVisible, setIsSubLayerVisible] = useState(false);
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -46,14 +46,14 @@ const MainContent = ({ handleHeader, themeData }) => {
     // 서브 레이어 렌더링
     const renderSubLayer = (theme) => {
         return (
-            <SubLayer theme={theme} isShow={isSubLayerVisible} onClose={() => {setIsSubLayerVisible(false);handleHeader(true)}}/>
+            <SubLayer theme={theme} isShow={isSubLayerVisible} setIsLoading={setIsLoading} onClose={() => {setIsSubLayerVisible(false);handleHeader(true)}}/>
         );
     };
     
     return (
     <>
         <section id="contents" className="collect-content" role="region" aria-labelledby="intro-heading">
-            <div id="main" className="collect-main">
+            <div id="main" className={`collect-main ${isSubLayerVisible ? '' : 'is-arr-active'}`}>
                 {!showSwiper ? (
                     <div id="intro" className="collect-intro card standard">
                         <h2 id="intro-heading" className="collect-intro__text">
@@ -70,7 +70,7 @@ const MainContent = ({ handleHeader, themeData }) => {
                         <Swiper
                             modules={[Navigation, Pagination]}
                             speed = {400}
-                            spaceBetween={30}
+                            spaceBetween={-20}
                             slidesPerView={1}
                             pagination={{ el: '.swiper-pagination', clickable: true }}
                             navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
@@ -101,12 +101,21 @@ const MainContent = ({ handleHeader, themeData }) => {
                                 return (
                                 <SwiperSlide className="card sub_use card-theme" key={theme.id} onClick={() => handleSlideClick(index + 1)}>
                                     <div className="collect-card__top">
-                                        <div className="collect-card__img-theme">{theme.id}</div>                                                                            
+                                        {/* <div className="collect-card__img-theme">{theme.id}</div>}*/}
                                         <h3>
                                             <div className="collect-card__title title--en" style={{ color: theme.color }}>{theme.nmEn}</div>
                                             <div className="collect-card__title title--ko">{theme.nmKo}</div>
                                         </h3>
                                     </div>
+                                    <ul className="collect-card__list">
+                                        {theme.menu.map((menu, index) => {
+                                            return (
+                                                <li key={index} className="collect-card__item">
+                                                    {menu.title}
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
                                     <div className="collect-card__bottom">수집덕후의 테마가 있는 수집이야기 - KOONIE COLLECTION</div>
                                     <span className="bg_area" aria-hidden="true" style={{ backgroundImage: `url(${imgSrc})` }}></span>
                                 </SwiperSlide>

@@ -9,8 +9,8 @@
 .lay-detail.is-show{display:flex;flex-direction: column;}
 .lay-detail__head{min-height:150px;z-index:25;background: rgba(0,0,0,.95);border-bottom:1px solid #343333;text-align: left;box-shadow:0 10px 20px rgba(0,0,0,.8);flex:none}
 .lay-detail__head-title{padding: 30px 50px 0;text-align: left;}
-.lay-detail__text-theme{color:#666666;font-size:14px;letter-spacing: -1px;font-weight: 400;height:18px;line-height: 18px;text-transform:uppercase}
-.lay-detail__title{position: relative;font-weight: 900;height:47px;display:flex;align-items:baseline;gap:0 8px}
+.lay-detail__text-theme{color:#666666;font-size:14px;letter-spacing: -1px;font-weight:400;height:18px;line-height: 18px;text-transform:uppercase;padding-bottom:10px}
+.lay-detail__title{position: relative;font-weight: 900;height:44px;display:flex;align-items:baseline;gap:0 8px}
 .lay-detail__btn-close{background: url(../images/ico_btn_close.png) no-repeat 50% 50%;position: absolute;top:20px;right:20px;width:30px;height:30px;z-index: 10;text-indent:-9999em;cursor: pointer;}
 .lay-detail__cont{width:100%;position: relative;flex:1;overflow-y:auto;text-align:left}
 ::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: rgba(255,255,255,.2);}
@@ -23,13 +23,14 @@
 .lay-detail__title--ko{font-size:24px;position: relative;line-height: 30px;letter-spacing: -1px;padding-left:2px;font-weight: bold;color:#fff}
 
 /* 서브레이어 - 서브메뉴 */
-.lay-detail__head .sub_menu{padding:7px 50px;color:#fff;position: relative;display:flex;align-items:center;flex-wrap:wrap}
-.lay-detail__head .sub_menu li{height:40px;line-height:40px;font-size:15px;padding:0 15px 0 0;letter-spacing:-1px;opacity: .7;white-space:nowrap}
+.lay-detail__head .sub_menu{padding:0 50px 7px 50px;color:#fff;position: relative;display:flex;align-items:center;flex-wrap:wrap}
+.lay-detail__head .sub_menu li{height:40px;line-height:40px;font-size:15px;padding:0 15px 0 0;letter-spacing:-.5px;opacity: .7;white-space:nowrap}
 .lay-detail__head .sub_menu li:hover{opacity: .9;}
 .lay-detail__head .sub_menu li.btn--list{margin-left:auto;padding:0 0 0 35px;position: relative;}
-.lay-detail__head .sub_menu li.btn--list:after{content:"";width:26px;height:26px;border-radius:13px 13px;background:url(../images/ico_detail_blk.png) no-repeat 50% 50% var(--var-main-color);position: absolute;top:7px;left:0;cursor: pointer;}
+.lay-detail__head .sub_menu li.btn--list:after{content:"";width:26px;height:26px;border-radius:13px 13px;background:url(../images/ico_detail_blk.png) no-repeat 50% 50% var(--var-main-color);position: absolute;top:7px;left:0;cursor: pointer;filter:grayscale(100%)}
 .lay-detail__head .sub_menu li.btn--list + .btn--list{margin-left:15px}
-.lay-detail__head .sub_menu li.is-active{font-weight:900;color:var(--var-main-color);opacity:1}
+.lay-detail__head .sub_menu li.is-active{font-weight:900;color:var(--var-main-color);opacity:1;}
+.lay-detail__head .sub_menu li.is-active.btn--list:after{filter:none}
 
 /* 서브레이어 - HTML 타입 */
 .lay-detail__inner{line-height:14px;color:#fff;padding:40px 50px;}
@@ -282,22 +283,22 @@ td[data-field-type="v-name"]{text-align: left;text-indent: 10px;letter-spacing: 
 .lay-preview.typeListMintages .img-wrap{width:50%;max-width:200px;min-width:150px;padding:10px;display:inline-block;}
 
 /* HTML 로드 페이지 스타일 */
-.typehtml .ip{font-size:16px;font-weight: bold;line-height:24px}
-.typehtml .nm{font-weight: normal;letter-spacing:0}
-.typehtml table th,
-.typehtml table td{padding:10px}
-.typehtml table td{color:rgba(255,255,255,.7);line-height: 18px}
-.typehtml table td.tac,
-.typehtml table thead th,
-.typehtml table tbody th{text-align:center}
-.typehtml .wrap-image{width:100%;max-width:500px;padding-bottom:10px}
-.typehtml .wrap-image img{width:100%}
-.typehtml .wrap-image .wrap-source{padding:10px 0;margin-top:20px}
-.typehtml .wrap-image .img-euro{background-position-x:0 !important;}
+.lay-detail__inner.typehtml .ip{font-size:16px;font-weight: bold;line-height:24px}
+.lay-detail__inner.typehtml .nm{font-weight: normal;letter-spacing:0}
+.lay-detail__inner.typehtml table th,
+.lay-detail__inner.typehtml table td{padding:10px}
+.lay-detail__inner.typehtml table td{color:rgba(255,255,255,.7);line-height: 18px}
+.lay-detail__inner.typehtml table td.tac,
+.lay-detail__inner.typehtml table thead th,
+.lay-detail__inner.typehtml table tbody th{text-align:center}
+.lay-detail__inner.typehtml .wrap-image{width:100%;max-width:500px;padding-bottom:10px}
+.lay-detail__inner.typehtml .wrap-image img{width:100%}
+.lay-detail__inner.typehtml .wrap-image .wrap-source{padding:10px 0;margin-top:20px}
+.lay-detail__inner.typehtml .wrap-image .img-euro{background-position-x:0 !important;}
 /* :: 유로설명 내 시리즈 구분 */
-.typehtml ul li{font-size:14px;color: rgba(255,255,255,.7);}
+.lay-detail__inner.typehtml ul li{font-size:14px;color: rgba(255,255,255,.7);}
 /* :: America Quater 내 바로가기 */
-.typehtml .btn_detail_view{display:inline-block;padding:5px 20px;color: #fff;background:rgba(255,255,255,.2)}
+.lay-detail__inner.typehtml .btn_detail_view{display:inline-block;padding:5px 20px;color: #fff;background:rgba(255,255,255,.2)}
 
 /* 자료출처표기 */
 .wrap-source{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;word-break:break-all;}
