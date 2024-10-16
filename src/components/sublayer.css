@@ -249,6 +249,7 @@ td[data-field-type="v-name"]{text-align: left;text-indent: 10px;letter-spacing: 
 .lay-preview{position: fixed;z-index: 30;top:0;left:0;right:0;bottom:0;background: rgba(0,0,0,.7);z-index:-1;opacity:0;transition:.3s all ease}
 .lay-preview.is-show{z-index:100;opacity:1}
 .lay-preview__head{position:fixed;top:0;left:0;right:0;height:60px;background:#000;text-align:center;color:#fff;line-height: 60px;border-bottom:1px solid rgba(255,255,255,.2);}
+.lay-preview__title{font-size: 15px;color: rgba(255, 255, 255, .8);}
 .lay-preview__cont{height:100%;display:table;text-align:center;width:100%}
 .lay-preview__inner{display:table-cell;vertical-align:middle;}
 .lay-preview img{width:100%;position:relative;}
@@ -305,3 +306,23 @@ td[data-field-type="v-name"]{text-align: left;text-indent: 10px;letter-spacing: 
 .wrap-source *{font-family:Roboto, Droid Sans, Helvetica,'NanumSquareNeoLight','맑은고딕','Malgun Gothic' , AppleSDGothicNeo, 'Apple SD 산돌고딕 Neo', Apple-Gothic, '애플고딕', 'gulim', '굴림', 'Tahoma', 'dotum', '돋움',  sans-serif}
 .wrap-source .tit-source{font-size:14px;margin-bottom:10px;opacity: .8;letter-spacing:-1px}
 .wrap-source .txt-source{font-size:11px;line-height: 16px;opacity: .5;}
+
+@media screen and (max-width:640px){
+	.lay-detail{top:0;left:0;right:0;bottom:0}
+	.lay-detail__head-title{padding:20px 20px 0}
+	.lay-detail__text-theme{padding-bottom:0}
+	.lay-detail__head .sub_menu{padding:0 20px 7px 20px}
+	.lay-detail__title{flex-wrap:wrap;height:auto}
+	.lay-detail__title--ko{width:100%}
+	.lay-detail__head .sub_menu{margin-top:12px}
+	.lay-detail__head .sub_menu li{height:24px;line-height:24px;}
+	.lay-detail__btn-close{transform:scale(0.6);transform-origin: 100% 0;}
+	.lay-detail__head .sub_menu li.btn--list{width:100%;height:28px;line-height:28px;padding-left:26px}
+	.lay-detail__head .sub_menu li.btn--list + .btn--list{margin:0}
+	.lay-detail__head .sub_menu li.btn--list:after{width:20px;height:20px;background-size:100% 100%;top:4px}
+	.lay-detail__inner{padding:0}
+	.lay-detail__inner .inner-group{padding:20px}
+	.lay-detail__inner h2{font-size:18px;line-height:18px;padding-bottom:6px}
+	.lay-detail__inner .txt-target{line-height:20px;font-size:14px;padding:12px 0 2px}
+	.wrap-source{padding:20px}
+}

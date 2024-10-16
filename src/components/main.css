@@ -53,3 +53,15 @@
 .collect-card__list{padding:30px 0 0 40px;text-align:left;font-weight:400;z-index:10;color:rgba(255,255,255,.2);font-size:14px;line-height:1.4;letter-spacing:-.5px}
 .collect-card__item:before{content:"";display: inline-block;width: 4px; height: 4px;border-radius: 50%;background-color: rgba(255,255,255,.1);margin-right: 5px;vertical-align: 3px;}
 .collect-card__bottom{text-indent:-9999em;z-index: 5;opacity: .25;margin-top:auto;padding:0 0 30px 40px;height:24px;background:url(../images/txt_card_bottom.png) no-repeat 40px 6px}
+
+@media screen and (max-width:640px){
+	.collect-main .swiper,
+	.collect-content .card{height:500px}
+	.collect-content .card{border-radius:10px}
+	.collect-wrap .swiper-pagination-bullet{width:20px}
+	.collect-card__title.title--en,
+	.swiper-slide-active .collect-card__title.title--en{font-size:40px}
+	.collect-main .swiper-slide .bg_area{background-size: 100% auto;background-position: 0 100%;background-repeat: no-repeat;}
+	.swiper-button-prev,
+	.swiper-button-next{display:none!important}
+}

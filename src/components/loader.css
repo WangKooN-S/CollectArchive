@@ -14,3 +14,8 @@
 @keyframes spin { 
   100% { transform: rotate(360deg); } 
 }
+
+
+@media screen and (max-width:640px){
+  .loader__icon{transform: scale(0.7);}
+}
