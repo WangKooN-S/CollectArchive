@@ -55,13 +55,24 @@
 .collect-card__bottom{text-indent:-9999em;z-index: 5;opacity: .25;margin-top:auto;padding:0 0 30px 40px;height:24px;background:url(../images/txt_card_bottom.png) no-repeat 40px 6px}
 
 @media screen and (max-width:640px){
+	.collect-intro__text{padding-top:140px}
+	.collect-intro__icon{top:75px}
+	.collect-card__top{padding:40px 40px 0 40px}
+
 	.collect-main .swiper,
-	.collect-content .card{height:500px}
+	.collect-content .card{height:420px}
 	.collect-content .card{border-radius:10px}
 	.collect-wrap .swiper-pagination-bullet{width:20px}
 	.collect-card__title.title--en,
-	.swiper-slide-active .collect-card__title.title--en{font-size:40px}
+	.swiper-slide-active .collect-card__title.title--en{font-size:20px;padding:0;letter-spacing:0;font-weight:700}
+	.collect-card__title.title--ko,
+	.swiper-slide-active .collect-card__title.title--ko{padding:0;font-size:34px;line-height:40px;font-weight:900}
 	.collect-main .swiper-slide .bg_area{background-size: 100% auto;background-position: 0 100%;background-repeat: no-repeat;}
 	.swiper-button-prev,
 	.swiper-button-next{display:none!important}
+}
+
+@media screen and (max-width:400px){
+	.collect-header__title{font-size: 18px;white-space:nowrap}
+	.collect-intro__text{transform: scale(0.8);}
 }
