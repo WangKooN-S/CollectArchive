@@ -58,12 +58,15 @@
 	.collect-intro__text{padding-top:140px}
 	.collect-intro__icon{top:75px}
 	.collect-card__top{padding:40px 40px 0 40px}
+	.collect-content{top:calc(50% + 30px)}
 
 	.collect-main .swiper,
 	.collect-content .card{height:420px}	
 	.collect-content .card{border-radius:10px}
 	.collect-main .swiper-slide,
 	.collect-main .swiper-slide.swiper-slide-active{box-shadow: none;border:2px solid #000}
+	.collect-main .swiper-slide {transform: scale(0.85) !important;}
+	.collect-main .swiper-slide.swiper-slide-active {transform: scale(1) !important;}
 	.collect-wrap .swiper-pagination-bullet{width:20px}
 	.collect-card__title.title--en,
 	.swiper-slide-active .collect-card__title.title--en{font-size:20px;padding:0;letter-spacing:0;font-weight:700}
@@ -73,6 +76,7 @@
 	.swiper-button-prev,
 	.swiper-button-next{display:none!important}
 }
+
 
 @media screen and (max-width:400px){
 	.collect-header__title{font-size: 18px;white-space:nowrap}

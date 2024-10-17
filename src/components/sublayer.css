@@ -310,10 +310,13 @@ td[data-field-type="v-name"]{text-align: left;text-indent: 10px;letter-spacing: 
 @media screen and (max-width:640px){
 	.lay-detail{top:0;left:0;right:0;bottom:0}
 	.lay-detail__head-title{padding:20px 20px 0}
-	.lay-detail__text-theme{padding-bottom:0}
-	.lay-detail__head .sub_menu{padding:0 20px 7px 20px}
+	.lay-detail__text-theme{display:none}
+	.lay-detail__head{min-height:134px}
+	.lay-detail__head .sub_menu{padding:0 20px 7px 20px;flex-wrap:nowrap;overflow-x:scroll;-webkit-overflow-scrolling: touch;scrollbar-width: none;-ms-overflow-style: none;}
+	.lay-detail__head .sub_menu::-webkit-scrollbar {display: none;height: 0;}
 	.lay-detail__title{flex-wrap:wrap;height:auto}
-	.lay-detail__title--ko{width:100%}
+	.lay-detail__title--en{font-size:20px}
+	.lay-detail__title--ko{width:100%;font-weight:700;font-size:30px;line-height:38px}
 	.lay-detail__head .sub_menu{margin-top:12px}
 	.lay-detail__head .sub_menu li{height:24px;line-height:24px;}
 	.lay-detail__btn-close{transform:scale(0.6);transform-origin: 100% 0;}
