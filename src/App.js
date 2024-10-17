@@ -7,7 +7,8 @@ import './App.css';
 
 function App() {
   // 로딩 여부 판단
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);  
+  const [isSimple, setIsSimple] = useState(false); // isSimple 상태 추가
 
   // 로딩이 끝나면 아래 코드를 처리
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
       document.querySelector('.loader').style.opacity = 0;
       setTimeout(() => {
         setIsLoading(false);
+        setIsSimple(true);
       }, 500);
     };
     window.addEventListener('load', handleLoad);
@@ -36,10 +38,10 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && <Loader />}
+      {isLoading && <Loader isSimple={isSimple}/>}
       <main id="wrapper" className="collect-wrap">
         <Header themeData={themeData} />
-        <MainContent handleHeader={handleHeader} themeData={themeData} setIsLoading={setIsLoading}/>
+        <MainContent handleHeader={handleHeader} themeData={themeData} setIsLoading={setIsLoading} />
       </main>
     </div>
   );

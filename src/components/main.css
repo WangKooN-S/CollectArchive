@@ -2,7 +2,7 @@
 
 #root{overflow:hidden;}
 .collect-content{position: fixed;top:50%;left:0;right:0;transform:translateY(-50%)}
-.collect-content .card{width:574px;height:347px;font-weight:900;color:#eee;position: relative;border-radius: 30px;box-sizing: border-box;background: rgba(0,0,0,.2)}
+.collect-content .card{width:574px;height:347px;font-weight:900;color:#eee;position: relative;border-radius: 30px;box-sizing: border-box;background: #181617}
 .collect-content .standard{background:#1e1d1b !important}
 
 /* 메인 인트로 영역 */
@@ -60,8 +60,10 @@
 	.collect-card__top{padding:40px 40px 0 40px}
 
 	.collect-main .swiper,
-	.collect-content .card{height:420px}
+	.collect-content .card{height:420px}	
 	.collect-content .card{border-radius:10px}
+	.collect-main .swiper-slide,
+	.collect-main .swiper-slide.swiper-slide-active{box-shadow: none;border:2px solid #000}
 	.collect-wrap .swiper-pagination-bullet{width:20px}
 	.collect-card__title.title--en,
 	.swiper-slide-active .collect-card__title.title--en{font-size:20px;padding:0;letter-spacing:0;font-weight:700}

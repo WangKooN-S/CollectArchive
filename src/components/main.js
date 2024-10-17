@@ -13,7 +13,7 @@ const MainContent = ({ handleHeader, themeData, setIsLoading }) => {
     const [themes, setThemes] = useState([]);
     const [showSwiper, setShowSwiper] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [isSubLayerVisible, setIsSubLayerVisible] = useState(false);
+    const [isSubLayerVisible, setIsSubLayerVisible] = useState(false);    
     const swiperRef = useRef(null);
 
     useEffect(() => {
