@@ -55,18 +55,18 @@
 .collect-card__bottom{text-indent:-9999em;z-index: 5;opacity: .25;margin-top:auto;padding:0 0 30px 40px;height:24px;background:url(../images/txt_card_bottom.png) no-repeat 40px 6px}
 
 @media screen and (max-width:640px){
-	.collect-intro__text{padding-top:140px}
-	.collect-intro__icon{top:75px}
+	body{background-color:#000}
+	.collect-intro__text{padding-top:120px}
+	.collect-intro__icon{top:55px}
 	.collect-card__top{padding:40px 40px 0 40px}
 	.collect-content{top:calc(50% + 30px)}
-
+	
+	.collect-main .swiper{width:100%;max-width:100vw}
 	.collect-main .swiper,
 	.collect-content .card{height:420px}	
 	.collect-content .card{border-radius:10px}
 	.collect-main .swiper-slide,
-	.collect-main .swiper-slide.swiper-slide-active{box-shadow: none;border:2px solid #000}
-	.collect-main .swiper-slide {transform: scale(0.85) !important;}
-	.collect-main .swiper-slide.swiper-slide-active {transform: scale(1) !important;}
+	.collect-main .swiper-slide.swiper-slide-active{box-shadow: none;border-radius:0}	
 	.collect-wrap .swiper-pagination-bullet{width:20px}
 	.collect-card__title.title--en,
 	.swiper-slide-active .collect-card__title.title--en{font-size:20px;padding:0;letter-spacing:0;font-weight:700}
