@@ -3,8 +3,11 @@ import './header.css';
 import wcoinImage from '../images/ico_wcoin_reverse.png';
 
 const Header = ({ themeData }) => {
+    // 메뉴 활성화 여부
     const [isActive, setIsActive] = useState(false);
-	const navRef = useRef(null);
+	// 네비게이션 요소 참조 ref
+    const navRef = useRef(null);
+    // 네비게이션 리스트 요소 참조 ref
     const navListRef = useRef(null);
 
     // menu-trigger 클릭 이벤트
@@ -12,7 +15,8 @@ const Header = ({ themeData }) => {
         setIsActive(!isActive);
     };
 
-	useEffect(() => {
+	// isActive 상태가 변경될 때마다 네비게이션 높이를 업데이트
+    useEffect(() => {
         if (navRef.current && navListRef.current) {
             if (isActive) {
                 const navListHeight = navListRef.current.offsetHeight;
@@ -23,7 +27,7 @@ const Header = ({ themeData }) => {
         }
     }, [isActive]);
 
-	// 스와이퍼 슬라이동 및 서브 메뉴 이동
+	// 스와이퍼 슬라이드 및 서브 메뉴 이동
 	const navigateToMenu = (themeIndex, menuIndex) => {
         setTimeout(() => {
             // .swiper-slide의 themeIndex+1번째 요소 클릭이벤트 실행
@@ -32,7 +36,7 @@ const Header = ({ themeData }) => {
                 slide.click();
                 setTimeout(() => {
                     // .sub_menu의 .menuIndex번째 li의 a 클릭이벤트 실행
-                    const li = document.querySelectorAll('.sub_menu li')[menuIndex].querySelector('a');
+                    const li = document.querySelectorAll('.sub_menu li')[menuIndex]?.querySelector('a');
                     if (li) {
                         li.click();
                     }
@@ -54,11 +58,10 @@ const Header = ({ themeData }) => {
 						const introButton = document.querySelector('.collect-intro__btn-enter');
                         if (introButton) {
                             introButton.click();
-                            navigateToMenu(themeIndex, menuIndex);
                         } else {
                             setIsActive(false);
-                            navigateToMenu(themeIndex, menuIndex);
                         }
+                        navigateToMenu(themeIndex, menuIndex);
                     }
                 });
             });
@@ -89,7 +92,8 @@ const Header = ({ themeData }) => {
         handleHashChange();
     };
 
-	const makeNavList = () => {
+	// 네비게이션 리스트 생성
+    const makeNavList = () => {
 		if (!themeData) return null;
 		const navList = themeData.map((theme, index) => {
 			return (

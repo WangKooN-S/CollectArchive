@@ -3,7 +3,6 @@ import Loader from './components/loader';
 import Header from './components/header';
 import MainContent from './components/main';
 import themeData from './data/theme.json';
-import './App.css';
 
 function App() {
   // 로딩 여부 판단

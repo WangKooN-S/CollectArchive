@@ -3,17 +3,23 @@ import './sublayer.css';
 import PreviewLayer from './previewLayer';
 
 const SubLayer = ({theme, isShow, setIsLoading, onClose}) => {
+    // 서브레이어 열림 여부
     const [isVisible, setIsVisible] = useState(isShow);
+    // 서브레이어 내부 컨텐츠 
     const [content, setContent] = useState('');
+    // 서브레이어 내부 컨텐츠의 타입판단 클래스
     const [contentClass, setContentClass] = useState('');    
+    // 이미지 미리보기 데이터
     const [previewData, setPreviewData] = useState(null);
+    // 이미지 미리보기 레이어 열림 여부
     const [isPreviewShow, setIsPreviewShow] = useState(false);
 
-    // 강제로 첫번째 메뉴를 클릭하도록 설정
+    // isShow 값이 변경될 때마다 레이어의 가시성을 업데이트
     useEffect(() => {
         setIsVisible(isShow);
     }, [isShow]);
 
+    // theme 값이 변경될 때마다 첫 번째 메뉴 항목을 클릭
     useEffect(() => {
         // sub_menu의 첫 번째 li 항목의 클릭 이벤트 실행
         if (theme.menu && theme.menu.length > 0) {
@@ -176,7 +182,7 @@ const SubLayer = ({theme, isShow, setIsLoading, onClose}) => {
                         };
 
                         const renderSources = () => {
-                            if (!data.source) return null;
+                            if (!data.source) return ``;
                         
                             const sourcesHtml = data.source.map((source, index) => {
                                 const keyword = source.keyword ? `, "${source.keyword}"` : '';
@@ -309,7 +315,7 @@ const SubLayer = ({theme, isShow, setIsLoading, onClose}) => {
             <div id="subLayer" className={`lay-detail ${isVisible ? 'is-show' : ''} ${themeClass}`} style={{ '--var-main-color': theme.color }}>
                 <header id="subHeader" className="lay-detail__head">
                     <div className="lay-detail__head-title">
-                        <div className="lay-detail__text-theme">KOONIE {theme.id}</div>
+                        <div className="lay-detail__text-theme">KOONIE {themeClass}</div>
                         <h4 className="lay-detail__title">
                             <span className="lay-detail__title--en">{theme.nmEn}</span>
                             <span className="lay-detail__title--ko">{theme.nmKo}</span>
