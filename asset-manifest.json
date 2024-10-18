@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CollectArchive/static/css/main.56e380ad.css",
-    "main.js": "/CollectArchive/static/js/main.2bb03b36.js",
+    "main.css": "/CollectArchive/static/css/main.90b7be23.css",
+    "main.js": "/CollectArchive/static/js/main.18aa3df0.js",
     "static/js/453.b1cdc69f.chunk.js": "/CollectArchive/static/js/453.b1cdc69f.chunk.js",
     "static/media/eurocoins.png": "/CollectArchive/static/media/eurocoins.bc6a8549762ddb617ea7.png",
     "static/media/img-states.png": "/CollectArchive/static/media/img-states.085a4dbbd32c022b7875.png",
@@ -85,12 +85,12 @@
     "static/media/bg_tm06.jpg": "/CollectArchive/static/media/bg_tm06.6725be6d69847a384137.jpg",
     "static/media/logo.svg": "/CollectArchive/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/CollectArchive/index.html",
-    "main.56e380ad.css.map": "/CollectArchive/static/css/main.56e380ad.css.map",
-    "main.2bb03b36.js.map": "/CollectArchive/static/js/main.2bb03b36.js.map",
+    "main.90b7be23.css.map": "/CollectArchive/static/css/main.90b7be23.css.map",
+    "main.18aa3df0.js.map": "/CollectArchive/static/js/main.18aa3df0.js.map",
     "453.b1cdc69f.chunk.js.map": "/CollectArchive/static/js/453.b1cdc69f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56e380ad.css",
-    "static/js/main.2bb03b36.js"
+    "static/css/main.90b7be23.css",
+    "static/js/main.18aa3df0.js"
   ]
 }
