@@ -85,5 +85,5 @@
 	.collect-header__title{font-size: 18px;white-space:nowrap}
 	.collect-intro__text{transform: scale(0.8);}
 	.collect-main .swiper-slide.swiper-slide-active{z-index:100}
-	.collect-card__top{padding:40px 40px 0 24px}
+	.collect-card__top{padding:40px 24px 0 24px;text-align:center}
 }
