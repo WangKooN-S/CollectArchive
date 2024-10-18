@@ -59,7 +59,7 @@
 	
 	.collect-intro__text{padding-top:120px}
 	.collect-intro__icon{top:55px}
-	.collect-card__top{padding:40px 40px 0 40px}
+	.collect-card__top{padding:32px 40px 0 40px}
 	.collect-content{top:calc(50% + 30px)}
 	.collect-content .standard{background:#181617 !important}
 
@@ -68,7 +68,7 @@
 	.collect-content .card{height:420px}	
 	.collect-content .card{border-radius:10px}
 	.collect-main .swiper-slide,
-	.collect-main .swiper-slide.swiper-slide-active{box-shadow: none;border-radius:0}	
+	.collect-main .swiper-slide.swiper-slide-active{box-shadow: none;border-radius:0;transform:none}	
 	.collect-wrap .swiper-pagination-bullet{width:20px}
 	.collect-card__title.title--en,
 	.swiper-slide-active .collect-card__title.title--en{font-size:20px;padding:0;letter-spacing:0;font-weight:700}
@@ -81,7 +81,9 @@
 
 
 @media screen and (max-width:400px){
+	body{overflow:hidden;width:100%;height:100%}
 	.collect-header__title{font-size: 18px;white-space:nowrap}
 	.collect-intro__text{transform: scale(0.8);}
 	.collect-main .swiper-slide.swiper-slide-active{z-index:100}
+	.collect-card__top{padding:40px 40px 0 24px}
 }
